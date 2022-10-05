@@ -27,8 +27,7 @@ const storage = multer.diskStorage({
       cb(null, shortid.generate() + '-' + file.originalname)
     }
   })
-  
-  const upload = multer({ storage });
+const upload = multer({ storage });
 
 routes.post('/upload',upload.single('categoryImage'),uploadImg);
 
