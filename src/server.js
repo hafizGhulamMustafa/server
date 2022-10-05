@@ -22,6 +22,9 @@ app.use('/public', express.static(path.join(__dirname, 'uploads')));
 
 app.use('/api', auth)
 
+app.get('/test',(req,res)=>{
+    res.send("this is working properly")
+})
 
 app.listen(process.env.PORT || port, ()=>{
     console.log(`server is running at http://localhost:${port}`);
