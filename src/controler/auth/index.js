@@ -59,7 +59,7 @@ exports.login = async (req, res) => {
                 email: result.email,
               },
             };
-            const token = jwt.sign(data, process.env.JWT_SECRET, {
+            const token = jwt.sign(data, "MERNSTACKID", {
               expiresIn: "1h",
             });
             res.send({ message: "successfully login", token });
